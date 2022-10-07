@@ -25,7 +25,8 @@
       "type": "string",
       "default": "Headline",
       "required": true,
-      "minLength": 3
+      "minLength": 4,
+      "unique": true
     },
     "Slug": {
       "pluginOptions": {
@@ -46,15 +47,12 @@
       "type": "richtext",
       "default": "Insert Post Detail"
     },
-    "DetailImage": {
+    "PostImages": {
       "type": "media",
       "multiple": true,
       "required": false,
       "allowedTypes": [
-        "images",
-        "files",
-        "videos",
-        "audios"
+        "images"
       ],
       "pluginOptions": {
         "i18n": {
@@ -75,16 +73,27 @@
         }
       }
     },
-    "author": {
+    "post_authors": {
       "type": "relation",
-      "relation": "manyToOne",
-      "target": "api::author.author",
-      "inversedBy": "posts"
+      "relation": "oneToMany",
+      "target": "admin::user"
     },
-    "post": {
+    "tags": {
       "type": "relation",
-      "relation": "oneToOne",
-      "target": "api::author.author"
+      "relation": "oneToMany",
+      "target": "api::tag.tag"
+    },
+    "seo": {
+      "displayName": "seoInformation",
+      "type": "component",
+      "repeatable": false,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "seo.seo-information",
+      "required": true
     }
   }
 }

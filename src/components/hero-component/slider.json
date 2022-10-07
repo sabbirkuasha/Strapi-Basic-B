@@ -1,0 +1,29 @@
+{
+  "collectionName": "components_hero_component_sliders",
+  "info": {
+    "displayName": "Slider",
+    "icon": "archway",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "CallToAction": {
+      "type": "string",
+      "required": true
+    },
+    "SliderImages": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "buttons": {
+      "displayName": "link",
+      "type": "component",
+      "repeatable": true,
+      "component": "layout.link"
+    }
+  }
+}

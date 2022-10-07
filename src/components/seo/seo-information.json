@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_seo_seo_informations",
+  "info": {
+    "displayName": "seoInformation",
+    "icon": "fighter-jet"
+  },
+  "options": {},
+  "attributes": {
+    "seoTitle": {
+      "type": "string",
+      "required": true
+    },
+    "SeoDescription": {
+      "type": "text",
+      "required": false
+    }
+  }
+}
