@@ -1,0 +1,27 @@
+{
+  "collectionName": "components_layout_missions",
+  "info": {
+    "displayName": "mission",
+    "icon": "address-card"
+  },
+  "options": {},
+  "attributes": {
+    "heading": {
+      "type": "string",
+      "required": true
+    },
+    "missionDescription": {
+      "type": "richtext"
+    },
+    "ShowMedia": {
+      "type": "boolean"
+    },
+    "missionLogo": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false
+    }
+  }
+}
